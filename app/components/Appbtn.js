@@ -1,10 +1,10 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-export const TextInput = () => {
+export const Appbtn = () => {
   return (
     <View>
-      <Text>TextInput</Text>
+      <Text>Appbtn</Text>
     </View>
   );
 };

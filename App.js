@@ -1,8 +1,8 @@
 import React from 'react';
-import {Screenone, Screentwo, ScreenThree} from './app/screens';
+import {Login} from './app/screens';
 
 const App = () => {
-  return <Screentwo />;
+  return <Login />;
 };
 
 export default App;

@@ -1,3 +1,2 @@
-export {Appbutton} from './Appbutton';
-export {TextInput} from './TextInput';
-export {Header} from './Header';
+export {Appbtn} from './Appbtn';
+export {AppInput} from './AppInput';
