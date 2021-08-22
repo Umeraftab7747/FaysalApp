@@ -11,7 +11,7 @@ export const AppInput = props => {
             backgroundColor: props.color,
           },
         ]}>
-        <Image style={styles.img} source={require('../assets/mail.png')} />
+        <Image style={styles.img} source={props.imge} />
       </View>
       <TextInput
         placeholder={'Enter Email'}
