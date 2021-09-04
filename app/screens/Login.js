@@ -1,18 +1,43 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {Appbtn, AppInput} from '../components';
 
 export const Login = () => {
+  const [Singup, setSingup] = React.useState(true);
+
   return (
     <View style={styles.container}>
-      <Text style={styles.textLogin}>LOGIN</Text>
-      <View style={styles.Space} />
-      <AppInput imge={require('../assets/mail.png')} />
-      <AppInput />
-      <Appbtn Text={'LOGIN'} />
-      <TouchableOpacity>
-        <Text style={styles.rText}>REGISTER</Text>
-      </TouchableOpacity>
+      {/* hermes */}
+      {Singup ? (
+        <>
+          <Text style={styles.textLogin}>Signup</Text>
+          <View style={styles.Space} />
+          <AppInput placeholder={'Name'} />
+          <AppInput placeholder={'Email'} />
+          <AppInput placeholder={'Password'} password />
+          <Appbtn Text={'LOGIN'} />
+          <TouchableOpacity
+            onPress={() => {
+              setSingup(false);
+            }}>
+            <Text style={styles.rText}>Login Instead !</Text>
+          </TouchableOpacity>
+        </>
+      ) : (
+        <>
+          <Text style={styles.textLogin}>Login</Text>
+          <View style={styles.Space} />
+          <AppInput placeholder={'Email'} />
+          <AppInput placeholder={'Password'} password />
+          <Appbtn Text={'LOGIN'} />
+          <TouchableOpacity
+            onPress={() => {
+              setSingup(true);
+            }}>
+            <Text style={styles.rText}>REGISTER</Text>
+          </TouchableOpacity>
+        </>
+      )}
     </View>
   );
 };

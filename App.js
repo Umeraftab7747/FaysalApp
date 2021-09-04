@@ -1,8 +1,8 @@
 import React from 'react';
-import {Login} from './app/screens';
+import {Login, Pratice} from './app/screens';
 
 const App = () => {
-  return <Login />;
+  return <Pratice />;
 };
 
 export default App;

@@ -1,22 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, View, TextInput, Image} from 'react-native';
 
-export const AppInput = props => {
+export const AppInput = ({placeholder, password}) => {
   return (
     <View style={styles.Container}>
-      <View
-        style={[
-          styles.ImageContainer,
-          {
-            backgroundColor: props.color,
-          },
-        ]}>
-        <Image style={styles.img} source={props.imge} />
-      </View>
       <TextInput
-        placeholder={'Enter Email'}
+        placeholder={placeholder}
         style={styles.inputStyles}
-        secureTextEntry={props.password}
+        secureTextEntry={password}
       />
     </View>
   );
